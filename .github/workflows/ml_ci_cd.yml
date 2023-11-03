@@ -16,9 +16,9 @@ jobs:
       - name: pip install
         run: pip install -r requirements.txt
       - name: download dataset
-        run: wget -O data/breast_cancer.csv ${{github.event.client_payload.dataseturl}}
+        run: wget -O data/breast_cancer_data.csv ${{github.event.client_payload.dataseturl}}
       - name: cat dataset
-        run: cat data/breast_cancer.csv
+        run: cat data/breast_cancer_data.csv
       - name: train model
         run: python model/train.py
       - name: docker build
