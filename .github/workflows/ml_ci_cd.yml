@@ -20,7 +20,7 @@ jobs:
       - name: cat dataset
         run: cat data/breast_cancer_data.csv
       - name: breast_cancer_data model
-        run: python model/breast_cancer_data.py
+        run: python model/train.py
       - name: docker build
         run: docker build -t ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.event.client_payload.sha}} .
       - name: show images
