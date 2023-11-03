@@ -5,7 +5,6 @@ from sklearn.ensemble import RandomForestClassifier
 from joblib import dump
 import pandas as pd
 import pathlib
-import numpy as np
 import warnings
 warnings.filterwarnings("ignore") 
 
